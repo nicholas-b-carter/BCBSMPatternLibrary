@@ -1,3 +1,6 @@
 _site
 .idea
 node_modules
+bower_components
+generated
+npm-debug.log

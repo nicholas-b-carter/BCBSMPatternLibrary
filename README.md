@@ -1,52 +1,44 @@
-jekyll-gulp-sass-browser-sync
-=============================
+BCBSM UI Design Library
+==============
 
-A starter project including full setup for Jekyll, GulpJS, SASS, AutoPrefixer &amp; BrowserSync
+- [View the UI Design Library](https://nicholas-b-carter.github.io/BCBSMPatternLibrary/)
+- [Contributing](CONTRIBUTING.md)
+- [How-to: Using the UI Design Library in your project](howto.md)
+- [License](LICENSE)
 
-Here's a 1.5min [screencast](http://quick.as/pvrslgx) showing what you get.
+Have feedback or questions about the UI Design Library? [Create an issue!](https://github.com/nicholas-b-carter/BCBSMPatternLibrary/issues)
 
-And here's a GIF showing the CSS injecting.
+#### About this repository
 
-![GIF](http://f.cl.ly/items/373y2E0e0i2p0E2O131g/test-gif.gif)
+This is the source code repository for the [BCBSM UI Design Library](https://nicholas-b-carter.github.io/BCBSMPatternLibrary/). The site is powered by [Jekyll](http://jekyllrb.com/), a static site generator that plays well with [Github Pages](https://help.github.com/articles/using-jekyll-with-pages/). 
 
-## System Preparation
+#### Want to contribute?
+See our [CONTRIBUTING.md](CONTRIBUTING.md) file for contribution guidelines.
 
-To use this starter project, you'll need the following things installed on your machine.
+---
 
-1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
-2. [NodeJS](http://nodejs.org) - use the installer.
-3. [GulpJS](https://github.com/gulpjs/gulp) - `$ npm install -g gulp` (mac users may need sudo)
+### Building & running locally
+You will need to [install Jekyll](http://jekyllrb.com/docs/installation/). You will also need to [install Node.js](http://nodejs.org/download/). Node.js powers the front-end build and dependency management tools [Grunt](http://gruntjs.com/) and [Bower](http://bower.io/).
 
-## Local Installation
-
-1. Clone this repo, or download it into a directory of your choice.
-2. Inside the directory, run `npm install`.
-
-## Usage
-
-**development mode**
-
-This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.
-
-```shell
-$ gulp
+Once Jekyll and Node.js are installed, ensure you have Grunt and Bower installed globally with:
+```
+npm install grunt-cli -g
+npm install bower -g
 ```
 
-**jekyll**
-
-As this is just a Jekyll project, you can use any of the commands listed in their [docs](http://jekyllrb.com/docs/usage/)
-
-## Deploy with Gulp
-
-You can easily deploy your site build to a gh-pages branch. First, follow the instructions at [gulp-gh-pages](https://github.com/rowoot/gulp-gh-pages) to get your branch prepared for the deployment and to install the module. Then, in `gulpfile.js` you'll want to include something like the code below. `gulp.src()` needs to be the path to your final site folder, which by default will be `_site`. If you change the `destination` in your `_config.yml` file, be sure to reflect that in your gulpfile.
-
-
-
-```javascript
-var deploy = require("gulp-gh-pages");
-
-gulp.task("deploy", ["jekyll-build"], function () {
-    return gulp.src("./_site/**/*")
-        .pipe(deploy());
-});
+Then install the project's dependencies with:
 ```
+npm install
+bower install
+```
+---
+#### Running the documentation
+Build the front-end assets (SASS/CSS/JS) with:
+```
+gulp build
+```
+This starts Jekyll, which compiles the markdown files into static html files, starts a server for you to view the documentation at, as well as watches for changes and recompiles. 
+
+
+##### Distribution Builds
+After running `gulp build`, you will have a `_site` folder that contains the entire static site and resources. 

@@ -1,31 +1,51 @@
 {
-  "name": "browser-sync-jekyll",
+  "name": "BCBSMPatternLibrary",
   "version": "0.0.0",
-  "description": "A starter project including full setup for Jekyll, GulpJS, SASS & BrowserSync",
+  "description": "BCBSM Pattern Library",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Shane Osbourne",
+  "author": "Nicholas Carter",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.8.8",
-    "gulp-sass": "^2.1.0",
-    "browser-sync": "^1.3.7",
-    "gulp-autoprefixer": "1.0.0"
+    "bower": "^1.7.9",
+    "browser-sync": "^2.13.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "3.1.0",
+    "gulp-bower": "0.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-minify": "0.0.12",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sass-lint": "^1.2.0",
+    "gulp-sassbeautify": "^0.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-zip": "^3.2.0",
+    "run-sequence": "^1.2.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync.git"
+    "url": "https://github.com/nicholas-b-carter/BCBSMPatternLibrary.git"
   },
   "keywords": [
     "jekyll",
     "gulp",
     "sass",
-    "browsersync"
+    "browsersync",
+    "bsbsm",
+    "sass",
+    "bootstrap-sass"
   ],
   "bugs": {
-    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync/issues"
+    "url": "https://github.com/nicholas-b-carter/BCBSMPatternLibrary/issues"
   },
-  "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync"
+  "homepage": "https://nicholas-b-carter.github.io/BCBSMPatternLibrary",
+  "dependencies": {
+    "gulp-scss-lint": "^0.4.0",
+    "gulp-scss-lint-stylish": "^1.0.1"
+  }
 }

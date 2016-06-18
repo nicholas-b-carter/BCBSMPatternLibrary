@@ -1,4 +1,66 @@
-name: Your New Jekyll Site
-markdown: redcarpet
-highlighter: pygments # or rouge or null
-exclude: ["node_modules", "gulpfile.js", "package.json"]
+# Jekyll will exclude these files during compilation
+exclude:
+  - CONTRIBUTING.md
+  - README.md
+  - todo.md
+  - front
+  - node_modules
+  - bower_components
+  - bcbsm
+  - bower.json
+  - package.json
+  - .sass-cache
+  - report.xml
+
+# Markdown parsing configuration
+markdown: kramdown
+kramdown:
+  auto_ids: true
+  parse_block_html: true
+
+# All links in the design library will start with this baseurl
+baseurl: ""
+
+# The url for the home page of the design library
+homeurl: ""
+
+# Set the default layout for everything in the docs folder to _layouts/pattern.html
+defaults:
+  - scope:
+      path: "docs"
+    values:
+      layout: "pattern"
+  - scope:
+      path: "docs/guides"
+    values:
+      layout: "guide"
+
+# All email links will use this variable
+email: nicholas.b.carter@gmail.com?subject=BCBSM Pattern Library
+
+# Repository information, which is used for links like "View on Github"
+repository:
+  name: nicholas-b-carter/BCBSMPatternLibrary
+  url: https://github.com/nicholas-b-carter/BCBSMPatternLibrary
+
+# The latest stable version
+version: 1.0.0
+
+# The list of all versions, which are referenced on the home page
+versions:
+  - name: 1.0.0
+    url: /docs
+
+# The categories for the side navigation. These correspond to the folders under the /docs folder
+doctypes:
+  - foundation
+  - components
+  - patterns
+  - inspiration
+
+guidetypes:
+  - project
+  - research
+  - requirements
+  - design
+  - evaluation
